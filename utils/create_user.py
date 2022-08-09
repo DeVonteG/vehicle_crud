@@ -1,6 +1,6 @@
 import requests
 
-URL = "http:127.0.0.1:5002/vehicles"
+URL = "http://127.0.0.1:5002/vehicles"
 
 def create_vehicle(make, model, owner_first, owner_last):
     owner={

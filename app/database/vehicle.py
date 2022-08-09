@@ -46,7 +46,7 @@ def insert(vehic_dict):
                 model,
                 owner_first,
                 owner_last
-            VALUES (?,?,?,?)
+            ) VALUES (?,?,?,?)
     """
     cursor = get_db()
     cursor.execute(statement, value_tuple)

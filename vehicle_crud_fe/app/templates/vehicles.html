@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Vehicles{% endblock title %}
+
+{% block content %}
+    {% for vehicle in vehicles %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Vehicle #{{vehicle ["id"] }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{vehicle ["make"] }} {{vehicle["model" ]}}</h6>
+            <p class="card-text">Vehicle Owner: {{ owner['owner_first'] }} {{ owner['owner_last'] }}</p>
+            <a href="{{ url_for('display_vehicle_profile', pk=vehicle['id']) }}" class="card-link">Continue Reading</a>
+        </div>
+    </div>
+    <br/>
+    {% endfor %}
+{% endblock content %}
