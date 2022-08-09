@@ -3,7 +3,8 @@ CREATE TABLE vehicle (
     make TEXT,
     model TEXT,
     owner_first VARCHAR(30),
-    owner_last VARCHAR(30)
+    owner_last VARCHAR(30),
+    active BOOLEAN DEFAULT 1
 );
 
 INSERT INTO vehicle (
